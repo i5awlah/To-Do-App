@@ -23,6 +23,7 @@ class ToDoAdaptor(private val items: ArrayList<ToDoItem>) : RecyclerView.Adapter
         holder.binding.apply {
             tvItem.text = item.content
             checkBox.isChecked = item.checked
+            tvItem.setTextColor(Color.BLACK)
             checkBox.setOnClickListener{
                 if (checkBox.isChecked) {
                     tvItem.setTextColor(Color.GRAY)
